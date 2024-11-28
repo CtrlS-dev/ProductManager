@@ -14,6 +14,8 @@ function FormElementInput({
   checked,
   validation,
   textError,
+  validation2,
+  textError2,
 }) {
   return (
     <div>
@@ -34,6 +36,10 @@ function FormElementInput({
         <p className="text-sm text-red-500 font-medium animate__animated animate__fadeInDown animate__faster mt-2">
           {textError}
         </p>
+      ) : validation2 ? (
+        <p className="text-sm text-red-500 font-medium animate__animated animate__fadeInDown animate__faster mt-2">
+          {textError2}
+        </p>
       ) : null}
     </div>
   );
@@ -50,6 +56,8 @@ FormElementInput.propTypes = {
   checked: PropTypes.any,
   validation: PropTypes.any,
   textError: PropTypes.string,
+  validation2: PropTypes.any,
+  textError2: PropTypes.string,
 };
 
 export default FormElementInput;

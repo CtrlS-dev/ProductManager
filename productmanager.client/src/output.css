@@ -746,6 +746,14 @@ video {
   max-width: 72rem;
 }
 
+.max-w-72 {
+  max-width: 18rem;
+}
+
+.max-w-60 {
+  max-width: 15rem;
+}
+
 .table-auto {
   table-layout: auto;
 }

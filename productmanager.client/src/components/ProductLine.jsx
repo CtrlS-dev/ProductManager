@@ -30,7 +30,7 @@ function ProductLine({ product }) {
         </p>
       </td>
       <td className="p-4 py-5">
-        <p className="text-sm font-normal text-slate-500">
+        <p className="text-sm font-normal max-w-60 text-slate-500">
           {product.productDescription}
         </p>
       </td>

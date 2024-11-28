@@ -81,6 +81,8 @@ const FormNewProduct = () => {
       setSelectedCategory("");
     }
   };
+  let productsArray = [];
+  products.map((product) => productsArray.push(product.productId));
 
   // Manejar el cambio de la categoría seleccionada
   const handleSubmit = (e) => {
@@ -117,9 +119,9 @@ const FormNewProduct = () => {
           placeholder={"Ejemplo: CA001"}
           titleInput={"Ingresa el ID del producto"}
           validation={formData.productId === ""}
-          textError={
-            "Este campo es obligatorio, asegurate de que este ID no exista"
-          }
+          textError={"Este campo es obligatorio"}
+          validation2={productsArray.includes(formData.productId)}
+          textError2={"Este ID de producto ya existe, debes ingresar uno nuevo"}
         />
 
         <FormElementInput
@@ -132,6 +134,12 @@ const FormNewProduct = () => {
           titleInput={"Descripción del producto"}
           validation={formData.productDescription === ""}
           textError={"Este campo es obligatorio, no puede estar vacio"}
+          validation2={formData.productDescription.length > 200}
+          textError2={
+            "No puede tener más de 200 caracteres. Caracteres actuales:" +
+            formData.productDescription.length +
+            "/200"
+          }
         />
 
         <FormElementOption
@@ -152,8 +160,10 @@ const FormNewProduct = () => {
           title={"Stock"}
           placeholder={"Ingresa stock disponibles"}
           titleInput={"Cantidad de productos"}
-          validation={formData.stock < 0 || formData.stock === ""}
-          textError={"Este campo no puede estar vacío y no puede ser negativo"}
+          validation={formData.stock === ""}
+          textError={"Este campo no puede estar vacío"}
+          validation2={formData.stock < 0}
+          textError2={"Este campo no puede ser negativo"}
         />
 
         <FormElementInput
@@ -164,8 +174,10 @@ const FormNewProduct = () => {
           title={"Precio"}
           placeholder={"Ingresa precio de producto"}
           titleInput={"Precio del producto"}
-          validation={formData.price === "" || formData.price < 0}
-          textError={"Este campo no puede estar vacío y no puede ser negativo"}
+          validation={formData.price === ""}
+          textError={"Este campo no puede estar vacio"}
+          validation2={formData.price <= 0}
+          textError2={"Debes ingresar un precio válido"}
         />
         <div className="flex gap-4 text-lg font-semibold">
           <div className="flex items-center space-x-2">
