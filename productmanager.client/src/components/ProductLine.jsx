@@ -21,21 +21,41 @@ function ProductLine({ product }) {
 
   return (
     <tr
-      className="hover:bg-slate-200 rounded-md h-12 transition-all duration-300 divide-dotted divide-x-2 divide-y-2 divide-gray-200 ease-in-out hover:cursor-pointer"
+      className="hover:bg-slate-50 border-b border-slate-200 max-h-44"
       key={product.productId}
     >
-      <td className="p-2">{product.productId}</td>
-      <td className="p-2 max-w-48">{product.productDescription}</td>
-      <td className="p-2">{product.productCategory.categoryDescription}</td>
-      <td className="p-2">{product.stock}</td>
-      <td className="p-2">{product.price} $</td>
-      <td className="p-2" title="¿Tiene descuento?">
-        {product.haveECDiscount === "y" ? "Sí" : "No"}
+      <td className="p-4 py-5">
+        <p className="block font-semibold text-sm text-slate-800">
+          {product.productId}
+        </p>
       </td>
-      <td className="p-2" title="¿Producto activo?">
-        {product.isActive === "y" ? "Sí" : "No"}
+      <td className="p-4 py-5">
+        <p className="text-sm font-normal text-slate-500">
+          {product.productDescription}
+        </p>
       </td>
-      <td className="gap-2 p-2">
+      <td className="p-4 py-5">
+        <p className="text-sm font-normal text-slate-500">
+          {product.productCategory.categoryDescription}
+        </p>
+      </td>
+      <td className="p-4 py-5">
+        <p className="text-sm font-normal text-slate-500">{product.stock}</p>
+      </td>
+      <td className="p-4 py-5">
+        <p className="text-sm font-normal text-slate-500">{product.price} $</p>
+      </td>
+      <td className="p-4 py-5" title="¿Tiene descuento?">
+        <p className="text-sm font-normal text-slate-500">
+          {product.haveECDiscount === "y" ? "Sí" : "No"}
+        </p>
+      </td>
+      <td className="p-4 py-5" title="¿Producto activo?">
+        <p className="text-sm font-normal text-slate-500">
+          {product.isActive === "y" ? "Sí" : "No"}
+        </p>
+      </td>
+      <td className="ga-2 p-4 py-5">
         <button
           className="p-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           onClick={() => setEditingProduct(product)}

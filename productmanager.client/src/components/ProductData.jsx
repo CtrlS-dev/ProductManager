@@ -25,18 +25,50 @@ function ProductData() {
       return <div>No hay productos</div>;
     } else
       return (
-        <div className="overflow-x-auto m-8 bg-white flex items-center justify-center max-w-[65rem] max-h-[55rem] rounded-3xl p-6 shadow-lg shadow-black/40 ">
-          <table className="divide-dotted divide-y-2 divide-gray-200">
-            <thead className="text-xs bg-gray-200">
-              <tr className="divide-x-2 divide-dotted divide-gray-200">
-                <th className="text-left p-2">Id Producto</th>
-                <th className="text-left max-w-8">Descripcion</th>
-                <th className="text-left p-2">Categoria</th>
-                <th className="text-left p-2">Stock</th>
-                <th className="text-left p-2">Precio Unitario</th>
-                <th className="text-left p-2">Descuento Web</th>
-                <th className="text-left p-2">Activo/Inactivo</th>
-                <th className="text-left p-2">Acciones</th>
+        <div className="flex flex-col w-full h-full overflow-x-auto overflow-y-auto text-gray-700 bg-white shadow-md rounded-3xl bg-clip-border">
+          <table className="w-full text-left table-auto min-w-max">
+            <thead className="text-xs text-right">
+              <tr>
+                <th className="p-4 border-b border-slate-200 bg-slate-50">
+                  <p class="text-sm font-normal leading-none text-slate-500">
+                    Id Producto
+                  </p>
+                </th>
+                <th className="p-4 border-b border-slate-200 bg-slate-50">
+                  <p class="text-sm font-normal leading-none text-slate-500">
+                    Descripcion
+                  </p>
+                </th>
+                <th className="p-4 border-b border-slate-200 bg-slate-50">
+                  <p class="text-sm font-normal leading-none text-slate-500">
+                    Categoria
+                  </p>
+                </th>
+                <th className="p-4 border-b border-slate-200 bg-slate-50">
+                  <p class="text-sm font-normal leading-none text-slate-500">
+                    Stock
+                  </p>
+                </th>
+                <th className="p-4 border-b border-slate-200 bg-slate-50">
+                  <p class="text-sm font-normal leading-none text-slate-500">
+                    Precio Unitario
+                  </p>
+                </th>
+                <th className="p-4 border-b border-slate-200 bg-slate-50">
+                  <p class="text-sm font-normal leading-none text-slate-500">
+                    Descuento Web
+                  </p>
+                </th>
+                <th className="p-4 border-b border-slate-200 bg-slate-50">
+                  <p class="text-sm font-normal leading-none text-slate-500">
+                    Activo/Inactivo
+                  </p>
+                </th>
+                <th className="p-4 border-b border-slate-200 bg-slate-50">
+                  <p class="text-sm font-normal leading-none text-slate-500">
+                    Acciones
+                  </p>
+                </th>
               </tr>
             </thead>
             <tbody className="text-xs">

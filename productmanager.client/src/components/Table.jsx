@@ -2,11 +2,7 @@ import ProductData from "../components/ProductData.jsx";
 
 //Componente para renderizar la tabla
 function Table() {
-  return (
-    <div>
-      <ProductData />
-    </div>
-  );
+  return <ProductData />;
 }
 
 export default Table;

@@ -11,8 +11,7 @@ export default function Nav() {
 
   return (
     <nav className="bg-slate-200 z-30 shadow-xl fixed w-full top-0 h-16 text-black backdrop-blur-lg">
-      <div className="flex justify-between items-center h-full w-full mx-auto px-6 sm:px-8">
-        {/* Logo and title */}
+      <div className="flex justify-between items-center h-full max-w-6xl mx-auto px-6 sm:px-8">
         <div className="flex items-center">
           <Logo />
           <h1 className="font-extrabold text-xl sm:text-2xl ml-4">
@@ -20,7 +19,6 @@ export default function Nav() {
           </h1>
         </div>
 
-        {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-2 hover:cursor-pointer">
           <img
             src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -33,7 +31,6 @@ export default function Nav() {
           </button>
         </div>
 
-        {/* Mobile menu button */}
         <button
           className="flex md:hidden items-center text-black"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -55,7 +52,6 @@ export default function Nav() {
           </svg>
         </button>
 
-        {/* Mobile menu */}
         {isMenuOpen && (
           <div className="absolute top-16 right-0 w-full bg-slate-200 shadow-lg md:hidden">
             <div className="flex flex-col items-center gap-4 py-4">

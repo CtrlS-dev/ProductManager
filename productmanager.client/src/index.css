@@ -26,3 +26,26 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+#product-data-content > div {
+  height: 44rem;
+  margin: 2rem;
+  max-width: 1150px;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar {
+    width: 14px;
+  }
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1b1b1bd7;
+    border-radius: 10px;
+    margin: 4px;
+  }
+}

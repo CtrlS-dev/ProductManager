@@ -12,7 +12,7 @@ export default function App() {
       <ProductContextProvider>
         <AddProductButton />
         <FormNewProduct />
-        <div className="flex justify-center items-center">
+        <div id="product-data-content">
           <Table />
         </div>
         <FormUpdateProduct />
