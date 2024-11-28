@@ -105,7 +105,7 @@ const FormNewProduct = () => {
 
   // Mostrar el formulario
   return (
-    <div className="mx-auto fixed inset-0 h-full w-full flex items-center bg-black/30 backdrop-blur-sm animate__fadeIn animate__fast animate__animated">
+    <div className="mx-auto fixed inset-0 h-full w-full flex items-center z-[60] bg-black/30 backdrop-blur-sm animate__fadeIn animate__fast animate__animated">
       <form
         onSubmit={handleSubmit}
         className="space-y-4 bg-white mt-10 p-6 rounded-2xl shadow-md max-w-2xl mx-auto"
