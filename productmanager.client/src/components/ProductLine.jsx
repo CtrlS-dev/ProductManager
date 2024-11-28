@@ -25,7 +25,7 @@ function ProductLine({ product }) {
       key={product.productId}
     >
       <td className="p-4 py-5">
-        <p className="block font-semibold text-sm text-slate-800">
+        <p className="block font-semibold text-sm text-slate-800 max-w-14 break-words">
           {product.productId}
         </p>
       </td>
@@ -35,23 +35,27 @@ function ProductLine({ product }) {
         </p>
       </td>
       <td className="p-4 py-5">
-        <p className="text-sm font-normal text-slate-500">
+        <p className="text-sm font-normal max-w-44 text-slate-500">
           {product.productCategory.categoryDescription}
         </p>
       </td>
       <td className="p-4 py-5">
-        <p className="text-sm font-normal text-slate-500">{product.stock}</p>
+        <p className="text-sm font-normal text-slate-500 max-w-14 break-words">
+          {product.stock}
+        </p>
       </td>
       <td className="p-4 py-5">
-        <p className="text-sm font-normal text-slate-500">{product.price} $</p>
+        <p className="text-sm font-normal text-slate-500 max-w-14 break-words">
+          {product.price} $
+        </p>
       </td>
       <td className="p-4 py-5" title="¿Tiene descuento?">
-        <p className="text-sm font-normal text-slate-500">
+        <p className="text-sm font-normal text-slate-500 max-w-5 break-words">
           {product.haveECDiscount === "y" ? "Sí" : "No"}
         </p>
       </td>
       <td className="p-4 py-5" title="¿Producto activo?">
-        <p className="text-sm font-normal text-slate-500">
+        <p className="text-sm font-normal text-slate-500 max-w-5 break-words">
           {product.isActive === "y" ? "Sí" : "No"}
         </p>
       </td>

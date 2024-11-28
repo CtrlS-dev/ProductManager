@@ -27,7 +27,7 @@ function ProductData() {
       return (
         <div className="flex flex-col w-full h-full overflow-x-auto overflow-y-auto text-gray-700 bg-white shadow-md rounded-3xl bg-clip-border">
           <table className="w-full text-left table-auto min-w-max">
-            <thead className="text-xs text-right">
+            <thead className="text-xs text-right sticky top-0">
               <tr>
                 <th className="p-4 border-b border-slate-200 bg-slate-50">
                   <p class="text-sm font-normal leading-none text-slate-500">

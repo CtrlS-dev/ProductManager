@@ -584,6 +584,10 @@ video {
   position: absolute;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .inset-0 {
   inset: 0px;
 }
@@ -628,10 +632,6 @@ video {
 
 .ml-4 {
   margin-left: 1rem;
-}
-
-.ml-8 {
-  margin-left: 2rem;
 }
 
 .mr-3 {
@@ -695,6 +695,10 @@ video {
   height: 1.5rem;
 }
 
+.h-\[calc\(100vh-6rem\)\] {
+  height: calc(100vh - 6rem);
+}
+
 .h-full {
   height: 100%;
 }
@@ -738,8 +742,20 @@ video {
   min-width: max-content;
 }
 
+.max-w-14 {
+  max-width: 3.5rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
+}
+
+.max-w-44 {
+  max-width: 11rem;
+}
+
+.max-w-5 {
+  max-width: 1.25rem;
 }
 
 .max-w-60 {
@@ -810,6 +826,10 @@ video {
   overflow-y: auto;
 }
 
+.break-words {
+  overflow-wrap: break-word;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -834,8 +854,8 @@ video {
   border-radius: 0.375rem;
 }
 
-.rounded-es-none {
-  border-end-start-radius: 0px;
+.rounded-ss-none {
+  border-start-start-radius: 0px;
 }
 
 .border {
@@ -1129,7 +1149,7 @@ video {
 }
 
 #product-data-content > div {
-  margin: 2rem;
+  margin: 0.5rem 0rem;
   max-width: 1150px;
   ::-webkit-scrollbar {
     width: 8px;

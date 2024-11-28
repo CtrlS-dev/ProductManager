@@ -8,12 +8,12 @@ import AddProductButton from "./components/AddProductButton.jsx";
 
 export default function App() {
   return (
-    <div className="flex flex-col mt-20 text-black/90 mx-auto w-fit">
+    <div className="flex flex-col h-[calc(100vh-6rem)] mt-20 text-black/90 mx-auto w-fit items-center justify-center">
       <ProductContextProvider>
-        <AddProductButton />
         <FormNewProduct />
-        <div id="product-data-content">
+        <div id="product-data-content" className="flex flex-col">
           <Table />
+          <AddProductButton />
         </div>
         <FormUpdateProduct />
       </ProductContextProvider>
