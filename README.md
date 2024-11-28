@@ -8,22 +8,22 @@ Este proyecto es una aplicación web que permite gestionar productos mediante op
 ## **✨ Funcionalidades Principales**
 
 • Gestión de Productos:
-    ✅Agregar nuevos productos con nombre, descripción y categoría.
-    ✅Editar productos existentes.
-    ✅Eliminar productos de la base de datos.
-    ✅Ver productos listados en una tabla interactiva.
+    - **✅** Agregar nuevos productos con nombre, descripción y categoría.
+    - **✅** Editar productos existentes.
+    - **✅** Eliminar productos de la base de datos.
+    - **✅** Ver productos listados en una tabla interactiva.
 
 • Gestión de Categorías:
-    ✅Agregar, editar y eliminar categorías.
+    - **✅** Agregar, editar y eliminar categorías.
 
 ---
 
 ## ** 🛠️ Tecnologías Utilizadas**
 
-• Frontend: React, Tailwind CSS, Vite.
-• Backend: ASP.NET Core 8, Entity Framework Core.
-• Base de Datos: SQL Server.
-• Herramientas de Desarrollo: Visual Studio 2022.
+- **•** Frontend: React, Tailwind CSS, Vite.
+- **•** Backend: ASP.NET Core 8, Entity Framework Core.
+- **•** Base de Datos: SQL Server.
+- **•** Herramientas de Desarrollo: Visual Studio 2022.
 
 ---
 
