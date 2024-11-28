@@ -742,16 +742,12 @@ video {
   max-width: 42rem;
 }
 
-.max-w-6xl {
-  max-width: 72rem;
-}
-
-.max-w-72 {
-  max-width: 18rem;
-}
-
 .max-w-60 {
   max-width: 15rem;
+}
+
+.max-w-6xl {
+  max-width: 72rem;
 }
 
 .table-auto {
@@ -1133,7 +1129,6 @@ video {
 }
 
 #product-data-content > div {
-  height: 44rem;
   margin: 2rem;
   max-width: 1150px;
   ::-webkit-scrollbar {
@@ -1152,6 +1147,10 @@ video {
     border-radius: 10px;
     margin: 4px;
   }
+}
+
+#product-data-content > div > div {
+  max-height: 44rem;
 }
 
 .hover\:cursor-pointer:hover {
