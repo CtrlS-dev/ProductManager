@@ -2,16 +2,21 @@ import PropTypes from "prop-types";
 import { UseProducts } from "../context/ProductContext";
 import { CiEdit } from "react-icons/ci";
 import { CiTrash } from "react-icons/ci";
-
+import PopupDelete from "./DeleteProduct/PopupDelete";
 // Componente para renderizar una linea de cada producto
 
 function ProductLine({ product }) {
   // Hook para eliminar o editar un producto
-  const { deleteProducts, setEditingProduct } = UseProducts();
+  const {
+    deleteProducts,
+    setEditingProduct,
+    setRemovingProduct,
+    removingProduct,
+  } = UseProducts();
 
   // Funcion para eliminar un producto
   const handleDelete = () => {
-    deleteProducts(product.productId);
+    setRemovingProduct(product);
   };
 
   // Funcion para editar un producto
@@ -67,7 +72,7 @@ function ProductLine({ product }) {
           <CiEdit />
         </button>
         <button
-          onClick={() => handleDelete()}
+          onClick={() => handleDelete(product)}
           className="px-4 py-2 bg-red-300 ml-2 text-black rounded-md hover:bg-red-400 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
         >
           <CiTrash />

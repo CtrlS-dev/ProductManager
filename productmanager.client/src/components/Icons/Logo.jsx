@@ -12,7 +12,7 @@ export default function Logo() {
         d="M16 8L22.9282 12V20L16 24L9.0718 20V12L16 8Z"
         fill="#17181C"
         stroke="white"
-        stroke-width="2"
+        strokeWidth={2}
       />
     </svg>
   );

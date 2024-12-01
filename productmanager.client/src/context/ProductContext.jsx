@@ -19,6 +19,8 @@ export const ProductContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   // Estado para el producto que se está editando
   const [editingProduct, setEditingProduct] = useState(null);
+  // Estado popup de confirmacion de eliminacion de producto
+  const [removingProduct, setRemovingProduct] = useState(null);
   // Estado para el producto que se está agregando
   const [addingProduct, setAddingProduct] = useState(null);
   // Estado para el modo de creación de producto
@@ -68,10 +70,18 @@ export const ProductContextProvider = ({ children }) => {
   // DELETE
   const deleteProducts = async (id) => {
     try {
-      await fetch(`https://localhost:5287/api/Products/${id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `https://localhost:5287/api/Products/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
       getProducts();
+      if (response.ok) {
+        // setRemovingProduct(null);
+        // TODO: COMPROBAR SI EL PRODUCTO SE ELIMINA PARA HABLITAR EL SetRemovingProduct
+        console.log("Producto eliminado");
+      }
     } catch (error) {
       console.error(error);
     }
@@ -133,6 +143,8 @@ export const ProductContextProvider = ({ children }) => {
         setEditingProduct,
         addingProduct,
         setAddingProduct,
+        removingProduct,
+        setRemovingProduct,
       }}
     >
       {children}
