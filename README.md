@@ -100,7 +100,7 @@ Este proyecto es una aplicación web que permite gestionar productos mediante op
 
 ---
 
-## **🪐  Navega al directorio del frontend**
+## **🪐  Navega al directorio del frontend.**
 
 1. Navega al directorio del frontend:
    ```bash
